@@ -7,68 +7,67 @@
 </head>
 <body>
 <p>
-         <?php
-         // クラスを定義する
-         class Food {
-             // プロパティを定義する                        
-             private $name;
-             private $price;
- 
-            // メソッドを定義する
-          public function show_price() {
-            return $this->price;
-        }
+<?php
+    //クラスを定義する
+    class Food
+    {
+      // プロパティを定義する
+      private $name;
+      private $price;
 
-             // コンストラクタを定義する
-             public function __construct(string $name, int $price) {
-                 $this->name = $name;
-                 $this->price = $price;
-             }
-         }
+      // コンストラクタを定義する
+      public function __construct(string $name, int $price)
+      {
+        $this->name = $name;
+        $this->price = $price;
+      }
 
-         //インスタンス化する
-         $food = new Food('potato', 250);
+      // メソッドを定義する
+      public function getPrice()
+      {
+        echo $this->price . '<br>';
+      }
+    }
 
-         // インスタンス$foodの各プロパティの値を出力する
-         print_r($food);
-        ?>
-        </p>
+    //インスタンス化する
+    $food = new Food('potato', 250);
+    // インスタンス$foodの価格を出力する
+    print_r($food);
+    echo '<br>';
+    $food->getPrice();
+    
 
-        <p>
-          <?php
-         class Animal {
-          // プロパティを定義する                        
-          private $name;
-          private $height;
-          private $weight;
+    //クラスを定義する
+    class Animal
+    {
+      private $name;
+      private $height;
+      private $weight;
 
-          // メソッドを定義する
-          public function show_height() {
-            return $this->height;
-        }
+      // コンストラクタを定義する
+      public function __construct(string $name, int $height, int $weight)
+      {
+        $this->name = $name;
+        $this->height = $height;
+        $this->weight = $weight;
+      }
 
-          // コンストラクタを定義する
-          public function __construct(string $name, int $height, string $weight) {
-              $this->name = $name;
-              $this->height = $height;
-              $this->weight = $weight;
-         }
-        }
- 
-         // インスタンス化する
-         $animal = new Animal('dog', 60, 5000);
- 
-         // インスタンス$userの各プロパティの値を出力する
-         print_r($animal);
-         echo '<br>';
+      // メソッドを定義する
+      public function getHeight()
+      {
+        echo $this->height . '<br>';
+      }
+    }
 
-         //取得した値を出力する
-      // Foodクラスのインスタンスから価格を取得する
-        echo $food->show_price().'<br>';
+    //インスタンス化する
+    $animal = new Animal('dog', 60, 5000);
+    // インスタンス$animalの高さを出力する
+    print_r($animal);
+    echo '<br>';
+    $animal->getheight();
 
-      // Animalクラスのインスタンスから高さを取得する
-        echo $animal->show_height().'<br>';
-      ?>
-      </p>
+    ?>
+ </p>
+
 </body>
 </html>
