@@ -7,6 +7,7 @@
 </head>
 <body>
 <p>
+
 <?php
     //クラスを定義する
     class Food
@@ -23,7 +24,7 @@
       }
 
       // メソッドを定義する
-      public function getPrice()
+      public function show_price()
       {
         echo $this->price . '<br>';
       }
@@ -34,7 +35,7 @@
     // インスタンス$foodの価格を出力する
     print_r($food);
     echo '<br>';
-    $food->getPrice();
+    $food->show_price();
     
 
     //クラスを定義する
@@ -53,7 +54,7 @@
       }
 
       // メソッドを定義する
-      public function getHeight()
+      public function show_height()
       {
         echo $this->height . '<br>';
       }
@@ -64,7 +65,7 @@
     // インスタンス$animalの高さを出力する
     print_r($animal);
     echo '<br>';
-    $animal->getheight();
+    $animal->show_height();
 
     ?>
  </p>
